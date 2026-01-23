@@ -88,11 +88,11 @@ export const HeroSection = () => {
           >
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl" />
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-card shadow-hover">
+              <div className="relative w-64 md:w-80 lg:w-96 rounded-full overflow-hidden border-4 border-card shadow-hover aspect-auto">
                 <img
                   src={profilePhoto}
                   alt="Contractor Sarah Tahoorah"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
