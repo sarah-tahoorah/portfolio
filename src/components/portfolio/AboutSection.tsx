@@ -32,7 +32,7 @@ export const AboutSection = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-2">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I am a second-year B.Tech student pursuing Computer Science and 
+                I am a third-year B.Tech student pursuing Computer Science and 
                 Engineering with a specialization in Artificial Intelligence. Eager 
                 to explore the vast landscape of computer science, AI, and full-stack 
                 development, I am constantly seeking new challenges and opportunities 
