@@ -20,13 +20,15 @@ export const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    mobile: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.mobile.trim() || !formData.message.trim()) {
       toast({
         title: "Missing Fields",
         description: "Please fill in all fields.",
@@ -35,12 +37,40 @@ export const ContactSection = () => {
       return;
     }
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://csarah.app.n8n.cloud/webhook-test/ae16444f-35fa-455e-9643-f00b9a7f5d8f", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          mobile: formData.mobile.trim(),
+          query: formData.message.trim(),
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: "", email: "", mobile: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -139,6 +169,22 @@ export const ContactSection = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
+                    Mobile Number
+                  </label>
+                  <Input
+                    type="tel"
+                    placeholder="Your mobile number"
+                    value={formData.mobile}
+                    onChange={(e) =>
+                      setFormData({ ...formData, mobile: e.target.value })
+                    }
+                    className="bg-background"
+                    maxLength={15}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
                   <Textarea
@@ -155,10 +201,11 @@ export const ContactSection = () => {
 
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full gradient-accent text-primary-foreground hover:opacity-90 transition-opacity"
                 >
                   <Send className="mr-2 h-4 w-4" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </div>
             </motion.form>
