@@ -91,7 +91,7 @@ export const HeroSection = () => {
                 <img
                   src={profilePhoto}
                   alt="Contractor Sarah Tahoorah"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain blur-md"
                 />
               </div>
             </div>
