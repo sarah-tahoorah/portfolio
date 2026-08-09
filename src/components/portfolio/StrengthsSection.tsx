@@ -1,28 +1,28 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Target, Users, Sparkles } from "lucide-react";
+import { MessageSquare, Users, Puzzle, Sparkles } from "lucide-react";
 
 const strengths = [
   {
-    icon: Zap,
-    title: "Quick Learner",
-    description: "Rapidly adapt to new technologies and frameworks",
-  },
-  {
-    icon: Target,
-    title: "Motivated & Sincere",
-    description: "Dedicated approach to every project and task",
+    icon: MessageSquare,
+    title: "Communication Skills",
+    description: "Clear, effective communication across teams and stakeholders",
   },
   {
     icon: Users,
-    title: "Team Player",
-    description: "Excellent communication and collaboration skills",
+    title: "Teamwork",
+    description: "Collaborative contributor in group projects and internships",
+  },
+  {
+    icon: Puzzle,
+    title: "Problem Solving",
+    description: "Analytical approach to debugging and application logic",
   },
   {
     icon: Sparkles,
-    title: "Tech Curious",
-    description: "Always exploring emerging technologies",
+    title: "Detail Oriented",
+    description: "Creative and careful in building software solutions",
   },
 ];
 

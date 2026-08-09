@@ -7,8 +7,10 @@ const navLinks = [
   { href: "#education", label: "Education" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
+
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

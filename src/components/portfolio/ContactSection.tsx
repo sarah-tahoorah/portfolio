@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: MapPin, label: "Location", value: "Kurnool" },
+  { icon: MapPin, label: "Location", value: "Kurnool, Andhra Pradesh" },
   { icon: Mail, label: "Email", value: "sarahtahoorah@gmail.com", href: "mailto:sarahtahoorah@gmail.com" },
   { icon: Phone, label: "Phone", value: "8688466121", href: "tel:8688466121" },
 ];
