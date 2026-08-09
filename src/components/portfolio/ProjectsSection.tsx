@@ -1,20 +1,26 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Folder } from "lucide-react";
+import { Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "Quiz Application",
-    technologies: ["React", "Node.js", "HTML", "CSS"],
+    title: "Internflow App",
+    technologies: ["Full Stack", "Workflow"],
     description:
-      "An interactive quiz application with dynamic questions and a user-friendly interface. Features include score tracking, timed questions, and responsive design.",
+      "An internship-based application focused on managing internship workflows, task coordination, and student communication.",
   },
   {
-    title: "Resume Builder",
-    technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+    title: "OptiCrop – Smart Agricultural Production Optimization Engine",
+    technologies: ["Machine Learning", "Python", "Data Analysis"],
     description:
-      "A web application that allows users to create and download professional resumes using structured input forms. Supports multiple templates and PDF export.",
+      "A crop recommendation system using Machine Learning to predict suitable crops based on soil nutrients (N, P, K), temperature, humidity, pH, and rainfall.",
+  },
+  {
+    title: "Simple Quiz App",
+    technologies: ["Programming Fundamentals", "Logic"],
+    description:
+      "An interactive quiz application built using logical operations and core programming fundamentals.",
   },
 ];
 
@@ -36,7 +42,7 @@ export const ProjectsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-12" />
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -45,11 +51,10 @@ export const ProjectsSection = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="group gradient-card rounded-xl p-6 shadow-card hover:shadow-hover transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 rounded-lg bg-accent group-hover:bg-primary/10 transition-colors">
+                <div className="mb-4">
+                  <div className="inline-flex p-3 rounded-lg bg-accent group-hover:bg-primary/10 transition-colors">
                     <Folder className="w-6 h-6 text-primary" />
                   </div>
-                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors cursor-pointer" />
                 </div>
 
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">

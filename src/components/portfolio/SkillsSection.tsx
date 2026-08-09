@@ -1,23 +1,33 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Database, Cloud } from "lucide-react";
+import { Code2, Globe, Brain, Cloud, Users } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Programming & Web Development",
+    title: "Programming Languages",
     icon: Code2,
-    skills: ["Java", "JavaScript", "HTML", "CSS", "React.js", "Node.js"],
+    skills: ["Java", "Python"],
   },
   {
-    title: "Backend & Databases",
-    icon: Database,
-    skills: ["MongoDB", "MERN Stack (basic)"],
+    title: "Web Technologies",
+    icon: Globe,
+    skills: ["HTML", "CSS"],
   },
   {
-    title: "Cloud & Tools",
+    title: "AI & Machine Learning",
+    icon: Brain,
+    skills: ["Artificial Intelligence", "Machine Learning", "Deep Learning"],
+  },
+  {
+    title: "Cloud Technologies",
     icon: Cloud,
-    skills: ["AWS (Foundational knowledge)", "Git & GitHub (basic)"],
+    skills: ["AWS Basics", "Cloud Computing"],
+  },
+  {
+    title: "Soft Skills",
+    icon: Users,
+    skills: ["Communication Skills", "Teamwork", "Problem Solving"],
   },
 ];
 
@@ -39,7 +49,7 @@ export const SkillsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-12" />
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.title}

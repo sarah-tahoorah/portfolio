@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Brain, Lightbulb, Users } from "lucide-react";
+import { Code, Brain, Cloud, Users } from "lucide-react";
 
 const highlights = [
-  { icon: Brain, label: "AI Enthusiast" },
-  { icon: Code, label: "Full Stack Dev" },
-  { icon: Lightbulb, label: "Quick Learner" },
+  { icon: Brain, label: "AI / ML" },
+  { icon: Code, label: "Java & Python" },
+  { icon: Cloud, label: "Cloud Basics" },
   { icon: Users, label: "Team Player" },
 ];
 
@@ -32,22 +32,20 @@ export const AboutSection = () => {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-2">
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I am a third-year B.Tech student pursuing Computer Science and 
-                Engineering with a specialization in Artificial Intelligence. Eager 
-                to explore the vast landscape of computer science, AI, and full-stack 
-                development, I am constantly seeking new challenges and opportunities 
-                to grow.
+                Creative and detail-oriented Artificial Intelligence student with
+                practical experience in Java development, AI/ML, cloud technologies,
+                and full stack applications through internships and real-world
+                projects.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                As a highly motivated learner, I have developed a strong interest in 
-                programming, research, and real-world problem solving. I believe in 
-                the power of technology to create meaningful impact and am committed 
-                to building innovative solutions.
+                I have a strong passion for building impactful software solutions,
+                learning emerging technologies, and contributing effectively in
+                collaborative environments.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I am open to guidance, mentorship, and hands-on learning opportunities 
-                that will help me develop my skills further and contribute meaningfully 
-                to the tech community.
+                Currently pursuing B.Tech in CSE (Artificial Intelligence) at
+                G. Pullaiah College of Engineering and Technology, and open to
+                internships, mentorship, and hands-on learning opportunities.
               </p>
             </div>
 

@@ -1,20 +1,27 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, BookOpen } from "lucide-react";
+import { GraduationCap, School, BookOpen } from "lucide-react";
 
 const education = [
   {
     institution: "G. Pullaiah College of Engineering and Technology",
-    degree: "B.Tech – Computer Science and Engineering (Artificial Intelligence)",
-    year: "Currently in 2nd Year",
+    degree: "B.Tech – CSE (Artificial Intelligence)",
+    year: "76%",
     icon: GraduationCap,
     current: true,
   },
   {
+    institution: "Sri Chaitanya Junior College",
+    degree: "Intermediate",
+    year: "91.3%",
+    icon: School,
+    current: false,
+  },
+  {
     institution: "St. Joseph's English Medium School",
-    degree: "CBSE Board",
-    year: "Completed",
+    degree: "Schooling",
+    year: "72.8%",
     icon: BookOpen,
     current: false,
   },

@@ -48,9 +48,11 @@ export const HeroSection = () => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-muted-foreground max-w-lg mb-8 leading-relaxed"
             >
-              "Aspiring AI and Full Stack Developer with a strong interest in 
-              learning, research, and real-world applications."
+              Creative and detail-oriented AI student with hands-on experience in
+              Java development, AI/ML, cloud technologies, and full stack
+              applications through internships and real-world projects.
             </motion.p>
+
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
